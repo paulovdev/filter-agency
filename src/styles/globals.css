@@ -1,25 +1,15 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: "robert-medium";
-  src: url("/fonts/robert-medium.woff2") format("woff2");
-}
-
-@font-face {
   font-family: "robert-regular";
   src: url("/fonts/robert-regular.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: "Neue Montreal";
-  src: url("/fonts/chivo.ttf") format("truetype");
-}
-
 @theme {
-  --font-robert-m: "robert-medium", sans-serif;
   --font-robert-r: "robert-regular", sans-serif;
-  --font-chivo: "Neue Montreal", sans-serif;
   --background: #f0f0f0;
+  --color-p: #111111;
+  --color-s: #ffffff;
 }
 
 body {
@@ -27,7 +17,7 @@ body {
   padding: 0;
   margin: 0;
 
-  font-family: var(--font-robert-r);
+  font-family: var(--);
   background: var(--background);
   width: 100dvw;
 }
@@ -43,7 +33,7 @@ body {
   width: 100vw;
   height: 100vh;
   content: "";
-  opacity: 0.06;
+  opacity: 0.04;
   z-index: 1000;
   pointer-events: none;
   background: url("../../public/noise.gif");

@@ -11,14 +11,14 @@ const About = () => {
       <div className="w-full flex-[2]">
         <h2 className="mb-6 text-[1rem] font-[600] uppercase">noi siamo</h2>
         <div className="max-w-[800px] ">
-          <p className="text-[3.25rem] text-black tracking-[-2px] leading-[1.3] uppercase max-lg:text-[2.75rem] max-md:text-[2.5rem] max-md:tracking-[-1px]">
+          <p className="text-[3.25rem] text-p tracking-[-2px] leading-[1.3] uppercase max-lg:text-[2.75rem] max-md:text-[2.5rem] max-md:tracking-[-1px]">
             Un polo creativo dove i marchi e le persone si incontrano per
             esplorare la propria identità, affinare la visione e tracciare un
             futuro innovativo.
           </p>
           <br />
           <br />
-          <p className="text-[3.25rem] text-black tracking-[-2px] leading-[1.3] uppercase max-lg:text-[2.75rem] max-md:text-[2.5rem] max-md:tracking-[-1px]">
+          <p className="text-[3.25rem] text-p tracking-[-2px] leading-[1.3] uppercase max-lg:text-[2.75rem] max-md:text-[2.5rem] max-md:tracking-[-1px]">
             Qui, le idee si trasformano in progetti concreti, creando
             connessioni che ispirano il cambiamento e la crescita. Un ambiente
             dove ogni collaboratore trova spazio per esprimere il proprio

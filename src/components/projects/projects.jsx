@@ -36,14 +36,14 @@ const Projects = () => {
                 variants={h2Animation}
                 initial="initial"
                 animate={isInView ? "animate" : "initial"}
-                className="font-robert-m font-[600] text-[8rem] text-[#fff] leading-[1] max-md:text-[4rem]"
+                className=" font-[600] text-[8rem] text-s leading-[1] max-md:text-[4rem]"
               >
                 {phrase}
               </motion.h2>
             ))}
           </div>
           <motion.span
-            className="text-xl text-[#fff]"
+            className="text-xl text-s"
             variants={spanAnimation}
             initial="initial"
             animate={isInView ? "animate" : "initial"}

@@ -23,7 +23,7 @@ const Hero = () => {
             onHoverEnd={() => setImg(false)}
           >
             <motion.h1
-              className="font-robert-m font-[600] text-[8rem] leading-[1] max-md:text-[6rem]"
+              className=" font-[600] text-[8rem] leading-[1] max-md:text-[6rem]"
               variants={isTablet ? undefined : h1Anim}
               animate={img ? "animate" : "initial"}
             >
@@ -47,7 +47,7 @@ const Hero = () => {
           </motion.div>
         </AnimatePresence>
 
-        <h1 className="font-robert-m font-[600] text-[8rem] leading-[1] max-md:text-[6rem]">
+        <h1 className=" font-[600] text-[8rem] leading-[1] max-md:text-[6rem]">
           IN
         </h1>
 
@@ -73,7 +73,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.h1
-              className="font-robert-m font-[600] text-[8rem] leading-[1] max-md:text-[6rem]"
+              className="font-[600] text-[8rem] leading-[1] max-md:text-[6rem]"
               variants={isTablet ? undefined : h1Anim2}
               animate={img2 ? "animate" : "initial"}
             >

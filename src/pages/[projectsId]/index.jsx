@@ -32,7 +32,6 @@ const ProjectView = () => {
     (project) => project.id === String(projectsId)
   );
 
-  // Enquanto não estiver pronto, mostrar loading
   if (!isReady) {
     return (
       <Layout>
@@ -43,7 +42,6 @@ const ProjectView = () => {
     );
   }
 
-  // Caso o ID seja inválido ou o projeto não exista
   if (!project) {
     return (
       <Layout>
@@ -54,11 +52,10 @@ const ProjectView = () => {
     );
   }
 
-  // Tudo pronto, renderiza o projeto
   return (
     <Layout>
       <main className="size-full">
-        <div className="relative top-0 w-screen h-screen flex flex-col items-center justify-end">
+        <div className="relative top-0 w-screen h-screen flex flex-col items-center justify-center">
           <Image
             src={project.img}
             width={500}
@@ -66,19 +63,43 @@ const ProjectView = () => {
             alt=""
             className="absolute size-full top-0 object-cover"
           />
+          <div className="relative w-full px-6 flex flex-col items-center justify-center text-center overflow-hidden">
+            <div className="mb-4 flex items-center gap-6">
+              <div className="flex items-center gap-2">
+                <span className="font-[600] text-[.9rem] text-s leading-[1]">
+                  categoria:
+                </span>
+                <p className="font-[600] text-[.9rem] text-s leading-[1]">
+                  {project.category}
+                </p>
+              </div>
 
-          <h1 className="relative -top-24 font-robert-m font-[600] text-9xl text-white uppercase mix-blend-exclusion">
-            {project.name}
-          </h1>
+              <div className="flex items-center gap-2">
+                <span className="font-[600] text-[.9rem] text-s leading-[1]">
+                  anno:
+                </span>
+                <p className="font-[600] text-[.9rem] text-s leading-[1]">
+                  {project.year}
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <span className="font-[600] text-[.9rem] text-s leading-[1]">
+                  cliente:
+                </span>
+                <p className="font-[600] text-[.9rem] text-s leading-[1]">
+                  {project.client}
+                </p>
+              </div>
+            </div>
+
+            <h1 className="font-[600] text-[8rem] text-s leading-[1] uppercase mix-blend-exclusion max-md:text-[6rem] ">
+              {project.name}
+            </h1>
+          </div>
         </div>
 
-        <section className="max-w-[800px] w-full px-6 py-[200px]">
-          <div className="flex items-center gap-6 text-sm text-black">
-            <p>{project.category}</p>
-            <p>{project.year}</p>
-            <p>{project.client}</p>
-          </div>
-
+        <section className="max-w-[800px] w-full px-6 py-[100px] max-md:pt-[50px]">
           <p className="mt-10 text-lg ">{project.description}</p>
         </section>
       </main>
