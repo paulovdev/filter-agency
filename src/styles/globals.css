@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "robert-medium";
+  src: url("/fonts/robert-medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "robert-regular";
+  src: url("/fonts/robert-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Neue Montreal";
+  src: url("/fonts/chivo.ttf") format("truetype");
+}
+
+@theme {
+  --font-robert-m: "robert-medium", sans-serif;
+  --font-robert-r: "robert-regular", sans-serif;
+  --font-chivo: "Neue Montreal", sans-serif;
+  --background: #f0f0f0;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  font-family: var(--font-robert-r);
+  background: var(--background);
+  width: 100dvw;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.noise::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.06;
+  z-index: 1000;
+  pointer-events: none;
+  background: url("../../public/noise.gif");
+}
+
+.stairs .transition-container {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  z-index: 998;
+}
+
+.stairs .transition-container div {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: #020202;
+}
+
+.stairs .transition-background {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #020202;
+  z-index: 998;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+}
