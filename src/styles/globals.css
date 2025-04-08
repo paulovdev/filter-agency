@@ -10,6 +10,9 @@
   --background: #f0f0f0;
   --color-p: #111111;
   --color-s: #ffffff;
+  --breakpoint-lg: 1024px;
+  --breakpoint-md: 768px;
+  --breakpoint-sm: 400px;
 }
 
 body {

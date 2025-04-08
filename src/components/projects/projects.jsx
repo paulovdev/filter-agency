@@ -11,6 +11,10 @@ const Projects = () => {
   const container = useRef(null);
   const text = useRef(null);
   const isTablet = useMedia("(max-width: 768px)");
+  const a = useMedia("(max-width: 1400px)");
+  const b = useMedia("(max-width: 1200px)");
+  const c = useMedia("(max-width: 1024px)");
+  const d = useMedia("(max-width: 820px)");
   const firstPhrase = ["P", "R", "O", "G", "E", "T", "T", "I", "S"];
 
   const { scrollYProgress } = useScroll({
@@ -36,14 +40,14 @@ const Projects = () => {
                 variants={h2Animation}
                 initial="initial"
                 animate={isInView ? "animate" : "initial"}
-                className=" font-[600] text-[8rem] text-s leading-[1] max-md:text-[4rem]"
+                className="font-[600] text-[8rem] text-s leading-[1] max-lg:text-[6rem] max-md:text-[4rem] max-sm:text-[3.5rem]"
               >
                 {phrase}
               </motion.h2>
             ))}
           </div>
           <motion.span
-            className="text-xl text-s"
+            className="text-[1.25rem] text-s  max-sm:text-[1.15rem]"
             variants={spanAnimation}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
@@ -53,9 +57,21 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-10">
+      <div className="flex flex-col gap-5">
         {projectsData.map((project, i) => {
-          const xValue = i % 2 === 0 ? 600 + i * 10 : -600 - i * 10;
+          let baseX = 500;
+
+          if (d) {
+            baseX = 100;
+          } else if (c) {
+            baseX = 150;
+          } else if (b) {
+            baseX = 200;
+          } else if (a) {
+            baseX = 250;
+          }
+
+          const xValue = i % 2 === 0 ? baseX + i * 10 : -baseX - i * 10;
           const yValue = i % 3 === 0 ? 50 + i * 5 : -50 - i * 5;
           const rotateValue = i % 2 === 0 ? i * 1 : -i * 1;
 
