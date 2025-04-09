@@ -76,6 +76,7 @@ const ProjectView = () => {
                 width={1200}
                 height={1200}
                 alt=""
+                priority
                 className="size-full object-center object-cover brightness-[85%] max-tablet:object-cover max-tablet:object-[50%_100%]"
               />
               <div className="absolute w-full px-6 flex flex-col items-center justify-center text-center overflow-hidden">
