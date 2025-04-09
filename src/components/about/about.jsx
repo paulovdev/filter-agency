@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  IoLogoDribbble,
+  IoLogoFacebook,
+  IoLogoInstagram,
+  IoLogoLinkedin,
+} from "react-icons/io5";
 
 const About = () => {
   return (
@@ -9,28 +15,31 @@ const About = () => {
       <div className="w-full flex-[2] max-md:hidden"></div>
 
       <div className="w-full flex-[2] max-lg:flex-[3]">
-        <h2 className="mb-6 text-[1rem] font-[600] uppercase">noi siamo</h2>
+        <h2 className="mb-6 several-txt">noi siamo</h2>
         <div className="max-w-[800px] w-full max-lg:max-w-full">
-          <p
-            className="text-[3.25rem] text-p tracking-[-2px] leading-[1.3] uppercase
-           max-lg:text-[2.75rem] max-md:text-[2.5rem] max-sm:text-[2rem] max-md:tracking-[-1px] max-sm::tracking-[-1px]"
-          >
+          <p className="about-txt">
             Un polo creativo dove i marchi e le persone si incontrano per
             esplorare la propria identità, affinare la visione e tracciare un
             futuro innovativo.
           </p>
           <br />
           <br />
-          <p
-            className="text-[3.25rem] text-p tracking-[-2px] leading-[1.3] uppercase
-           max-lg:text-[2.75rem] max-md:text-[2.5rem] max-sm:text-[2rem] max-md:tracking-[-1px] max-sm::tracking-[-1px]"
-          >
+          <p className="about-txt">
             Qui, le idee si trasformano in progetti concreti, creando
             connessioni che ispirano il cambiamento e la crescita. Un ambiente
             dove ogni collaboratore trova spazio per esprimere il proprio
             potenziale e contribuire a costruire qualcosa di unico e
             significativo.
           </p>
+        </div>
+        <div className="mt-12 flex items-center gap-8">
+          <IoLogoFacebook className="text-[2.5rem] text-p" />
+
+          <IoLogoInstagram className="text-[2.5rem] text-p" />
+
+          <IoLogoLinkedin className="text-[2.5rem] text-p" />
+
+          <IoLogoDribbble className="text-[2.5rem] text-p" />
         </div>
       </div>
     </section>

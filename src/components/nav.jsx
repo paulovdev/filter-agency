@@ -23,9 +23,7 @@ const Nav = () => {
               key={i}
               onClick={() => scrollToLenis(nav.href)}
             >
-              <a className="text-[.9rem] text-s mix-blend-difference max-sm:text-[.8rem]">
-                {nav.title}
-              </a>
+              <a className="nav-txt">{nav.title}</a>
               <div className="absolute w-0 h-0.5 bottom-[-3px] bg-s transition-all duration-300 group-hover:w-full"></div>
             </li>
           ))}
@@ -35,7 +33,7 @@ const Nav = () => {
             <a
               onClick={() => router.push("/", undefined, { scroll: false })}
               scroll={false}
-              className="text-[.9rem] text-s flex items-center gap-1 mix-blend-difference group-hover:-translate-x-0.5 transition-all duration-300 max-sm:text-[.8rem]"
+              className="nav-txt flex items-center gap-1 mix-blend-difference group-hover:-translate-x-0.5 transition-all duration-300 max-sm:text-[.8rem]"
             >
               <IoChevronBackSharp className="group-hover:-translate-x-0.5 transition-all duration-500" />
               ritorno

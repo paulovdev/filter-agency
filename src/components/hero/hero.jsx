@@ -23,7 +23,7 @@ const Hero = () => {
             onHoverEnd={() => setImg(false)}
           >
             <motion.h1
-              className="font-[600] text-[8rem] leading-[1] max-lg:text-[7rem] max-md:text-[6rem] max-sm:text-[5rem]"
+              className="hero-txt"
               variants={isTablet ? undefined : h1Anim}
               animate={img ? "animate" : "initial"}
             >
@@ -47,9 +47,7 @@ const Hero = () => {
           </motion.div>
         </AnimatePresence>
 
-        <h1 className="font-[600] text-[8rem] leading-[1] max-lg:text-[7rem] max-md:text-[6rem] max-sm:text-[5rem]">
-          IN
-        </h1>
+        <h1 className="hero-txt">IN</h1>
 
         <AnimatePresence>
           <motion.div
@@ -73,7 +71,7 @@ const Hero = () => {
             </motion.div>
 
             <motion.h1
-              className="font-[600] text-[8rem] leading-[1] max-lg:text-[7rem] max-md:text-[6rem] max-sm:text-[5rem]"
+              className="hero-txt"
               variants={isTablet ? undefined : h1Anim2}
               animate={img2 ? "animate" : "initial"}
             >
@@ -83,15 +81,11 @@ const Hero = () => {
         </AnimatePresence>
 
         <div className="mt-8 flex items-center gap-2">
-          <h2 className="text-[.8rem] font-[600] tracking-[1px] uppercase max-sm:tracking-[-.1px]">
-            filtro
-          </h2>
-          <h2 className="text-[1rem] font-[400] uppercase">®</h2>
+          <h2 className="several-txt">filtro</h2>
+          <h2 className="several-txt">®</h2>
 
-          <span>/</span>
-          <h2 className="text-[.8rem] font-[600] tracking-[1px] uppercase max-sm:tracking-[-.1px]">
-            scorrere verso il basso
-          </h2>
+          <span className="several-txt">/</span>
+          <h2 className="several-txt">scorrere verso il basso</h2>
         </div>
       </div>
     </section>

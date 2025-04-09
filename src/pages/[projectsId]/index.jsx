@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
+import { h2Animation } from "./anim";
 const ProjectView = () => {
   const router = useRouter();
   const { stopLenis, startLenis } = useLenis();
@@ -16,7 +17,7 @@ const ProjectView = () => {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, 600]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, 800]);
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -59,6 +60,8 @@ const ProjectView = () => {
     );
   }
 
+  const projectName = project.name.split("");
+
   return (
     <Layout>
       <main className="w-auto min-h-screen" ref={container}>
@@ -78,43 +81,44 @@ const ProjectView = () => {
               <div className="absolute w-full px-6 flex flex-col items-center justify-center text-center overflow-hidden">
                 <div className="mb-4 flex items-center gap-6">
                   <div className="flex items-center gap-2">
-                    <span className="font-[600] text-[.9rem] text-s leading-[1] max-sm:text-[.8rem]">
-                      categoria:
-                    </span>
-                    <p className="font-[600] text-[.9rem] text-s leading-[1] max-sm:text-[.8rem]">
+                    <span className="project-view-several-txt">categoria:</span>
+                    <p className="project-view-several-txt">
                       {project.category}
                     </p>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="font-[600] text-[.9rem] text-s leading-[1] max-sm:text-[.8rem]">
-                      anno:
-                    </span>
-                    <p className="font-[600] text-[.9rem] text-s leading-[1] max-sm:text-[.8rem]">
-                      {project.year}
-                    </p>
+                    <span className="project-view-several-txt">anno:</span>
+                    <p className="project-view-several-txt">{project.year}</p>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <span className="font-[600] text-[.9rem] text-s leading-[1] max-sm:text-[.8rem]">
-                      cliente:
-                    </span>
-                    <p className="font-[600] text-[.9rem] text-s leading-[1] max-sm:text-[.8rem]">
-                      {project.client}
-                    </p>
+                    <span className="project-view-several-txt">cliente:</span>
+                    <p className="project-view-several-txt">{project.client}</p>
                   </div>
                 </div>
 
-                <h1 className="font-[600] text-[8rem] text-s leading-[1] uppercase mix-blend-exclusion max-lg:text-[6rem] max-md:text-[4rem] max-sm:text-[3.5rem]">
-                  {project.name}
-                </h1>
+                <div className="relative flex items-start overflow-hidden">
+                  {projectName.map((phrase, i) => (
+                    <motion.h1
+                      key={i}
+                      custom={i}
+                      variants={h2Animation}
+                      initial="initial"
+                      animate="animate"
+                      className="project-view-hero-txt mix-blend-exclusion"
+                    >
+                      {phrase}
+                    </motion.h1>
+                  ))}
+                </div>
               </div>
             </motion.div>
           </div>
         </section>
         <section className="w-full my-12 mx-auto px-6">
-          <div className="max-w-[800px] max-md:max-w-full">
-            <p className="text-lg ">{project.description}</p>
+          <div className="max-w-[1200px] max-md:max-w-full">
+            <p className="project-description-txt">{project.description}</p>
           </div>
         </section>
       </main>
