@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { projectsData } from "@/data/projectsData";
 import { useRouter } from "next/router";
-import { h2Animation, spanAnimation } from "./anim";
+import { h2Animation, spanAnimation } from "@/animations/anim";
 import { useMedia } from "react-use";
 
 const Projects = () => {

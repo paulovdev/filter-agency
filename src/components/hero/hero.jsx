@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { h1Anim, h1Anim2, imgAnim, imgAnim2 } from "./anim";
+import { h1Anim, h1Anim2, imgAnim, imgAnim2 } from "@/animations/anim";
 
 import { useMedia } from "react-use";
 

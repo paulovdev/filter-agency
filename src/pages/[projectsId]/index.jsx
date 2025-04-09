@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
-import { h2Animation } from "./anim";
+import { h2Animation } from "@/animations/anim";
 const ProjectView = () => {
   const router = useRouter();
   const { stopLenis, startLenis } = useLenis();
