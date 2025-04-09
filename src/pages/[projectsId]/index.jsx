@@ -79,25 +79,8 @@ const ProjectView = () => {
                 priority
                 className="size-full object-center object-cover brightness-[85%] max-tablet:object-cover max-tablet:object-[50%_100%]"
               />
-              <div className="absolute w-full px-6 flex flex-col items-center justify-center text-center overflow-hidden">
-                <div className="mb-4 flex items-center gap-6">
-                  <div className="flex items-center gap-2">
-                    <span className="project-view-several-txt">categoria:</span>
-                    <p className="project-view-several-txt">
-                      {project.category}
-                    </p>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <span className="project-view-several-txt">anno:</span>
-                    <p className="project-view-several-txt">{project.year}</p>
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <span className="project-view-several-txt">cliente:</span>
-                    <p className="project-view-several-txt">{project.client}</p>
-                  </div>
-                </div>
+              <div className="absolute w-full px-6 flex flex-col items-center justify-center text-center overflow-hidden max-md:px-3">
+                <div className="mb-4 flex items-center gap-6"></div>
 
                 <div className="relative flex items-start overflow-hidden">
                   {projectName.map((phrase, i) => (
@@ -117,9 +100,55 @@ const ProjectView = () => {
             </motion.div>
           </div>
         </section>
-        <section className="w-full my-12 mx-auto px-6">
-          <div className="max-w-[1200px] max-md:max-w-full">
-            <p className="project-description-txt">{project.description}</p>
+        <section className="w-full my-12 mx-auto px-6 max-md:px-3">
+          <div className="flex items-start gap-4 max-md:flex-col">
+            <div className="flex-[2]">
+              <div className="max-w-[700px] flex flex-col items-start gap-2">
+                <span className="project-view-several-txt !text-p opacity-75">
+                  descrizione:
+                </span>
+                <p className="project-description-txt">{project.description}</p>
+              </div>
+
+              <br />
+            </div>
+
+            <div className="flex-[2]">
+              <div className="flex flex-col items-start gap-2">
+                <span className="project-view-several-txt !text-p opacity-75">
+                  categoria:
+                </span>
+                <p className="project-view-content-txt">{project.category}</p>
+              </div>
+
+              <br />
+
+              <div className="flex flex-col items-start gap-2">
+                <span className="project-view-several-txt !text-p opacity-75">
+                  anno:
+                </span>
+                <p className="project-view-content-txt">{project.year}</p>
+              </div>
+
+              <br />
+
+              <div className="flex flex-col items-start gap-2">
+                <span className="project-view-several-txt !text-p opacity-75">
+                  cliente:
+                </span>
+                <p className="project-view-content-txt">{project.client}</p>
+              </div>
+
+              <br />
+
+              <div className="flex flex-col items-start gap-2">
+                <span className="project-view-several-txt !text-p opacity-75">
+                  licenza:
+                </span>
+                <p className="project-view-content-txt">{project.license}</p>
+              </div>
+              <br />
+            </div>
           </div>
         </section>
       </main>

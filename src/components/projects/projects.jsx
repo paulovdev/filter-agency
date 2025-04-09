@@ -25,7 +25,7 @@ const Projects = () => {
 
   return (
     <section
-      className="relative w-screen px-6 pb-[250px]"
+      className="relative w-screen px-6 pb-[250px] max-md:px-3"
       ref={container}
       id="project"
     >
@@ -46,7 +46,7 @@ const Projects = () => {
             ))}
           </div>
           <motion.span
-            className="project-span-txt"
+            className="project-length-txt"
             variants={spanAnimation}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
@@ -110,9 +110,11 @@ const Projects = () => {
                 />
               </div>
               <div className="mt-2 w-full flex justify-between">
-                <p className="project-card-txt">{project.name}</p>
-                <p className="project-card-txt">{project.category}</p>
-                <p className="project-card-txt">{project.year}</p>
+                <p className="project-card-txt text-[1.1rem]">{project.name}</p>
+                <p className="project-card-txt text-[1rem]">
+                  {project.category}
+                </p>
+                <p className="project-card-txt text-[1rem]">{project.year}</p>
               </div>
             </motion.div>
           );

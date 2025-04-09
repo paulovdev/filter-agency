@@ -71,3 +71,16 @@ export const spanAnimation = {
   },
   exit: { opacity: 0, y: 100 },
 };
+
+export const pSlideParagraphAnim = {
+  initial: { y: "150%" },
+  animate: (custom) => ({
+    y: "0",
+    transition: {
+      duration: 1,
+
+      ease: [0.33, 1, 0.68, 1],
+      delay: 0.025 * custom,
+    },
+  }),
+};

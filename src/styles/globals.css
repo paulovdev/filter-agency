@@ -31,40 +31,47 @@
   }
 
   .several-txt {
-    @apply font-robert-b text-[.8rem] text-p tracking-[1px] uppercase max-sm:tracking-[-.1px];
+    @apply font-robert-b text-[1rem] text-p lowercase max-sm:tracking-[-.1px];
   }
 
   .nav-txt {
-    @apply font-robert-m text-[.9rem] text-s max-sm:text-[.8rem] mix-blend-difference;
+    @apply font-robert-m text-[.9rem] text-s max-sm:text-[.8rem] lowercase mix-blend-difference;
+  }
+
+  .about-hero-txt {
+    @apply font-robert-b text-[1rem] text-p uppercase max-sm:tracking-[-.1px];
   }
 
   .about-txt {
-    @apply font-robert-m text-[3.25rem] text-p tracking-[-2px] leading-[1.3] uppercase
-  max-lg:text-[2.75rem] max-md:text-[2.5rem] max-sm:text-[2rem] max-md:tracking-[-1px] max-sm:tracking-[-1px];
+    @apply font-robert-r text-[2rem] text-p tracking-[-1px] leading-[1.3];
   }
 
   .project-txt {
-    @apply font-robert-b text-[8rem] text-s leading-[1] tracking-[-4px] max-lg:text-[6rem] max-md:text-[4rem] max-sm:text-[3.5rem];
+    @apply font-robert-b text-[8rem] text-s leading-[1] tracking-[-4px] max-lg:text-[6rem] max-md:text-[4rem] max-sm:text-[3.5rem] max-md:tracking-[-2px];
   }
 
-  .project-card-txt {
-    @apply font-robert-b text-[.9rem] text-p tracking-[-.2px] uppercase;
-  }
-
-  .project-span-txt {
+  .project-length-txt {
     @apply font-robert-m text-[1.25rem] text-s max-sm:text-[1.15rem];
   }
 
+  .project-card-txt {
+    @apply font-robert-b text-p tracking-[-.2px] lowercase;
+  }
+
   .project-view-hero-txt {
-    @apply font-robert-b text-[7rem] text-s leading-[1.2] tracking-[-5px] uppercase max-lg:text-[6rem] max-md:text-[4rem] max-sm:text-[3.5rem];
+    @apply font-robert-b text-[7rem] text-s leading-[1.2] tracking-[-5px] uppercase max-lg:text-[6rem] max-md:text-[4rem] max-sm:text-[3.5rem] max-md:tracking-[-2px];
   }
 
   .project-view-several-txt {
-    @apply font-robert-m text-[.9rem] text-s leading-[1] max-sm:text-[.8rem];
+    @apply font-robert-m text-[.9rem] text-s leading-[1] lowercase max-sm:text-[.8rem];
   }
 
   .project-description-txt {
-    @apply font-robert-m text-[2.5rem] text-p tracking-[-1px] leading-[1.3] uppercase max-md:text-[2rem] max-sm:text-[1.75rem];
+    @apply font-robert-r text-[2rem] text-p tracking-[-1px] leading-[1.3];
+  }
+
+  .project-view-content-txt {
+    @apply font-robert-m text-[1rem] text-p max-sm:tracking-[-.1px];
   }
 }
 

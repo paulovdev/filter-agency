@@ -15,7 +15,7 @@ const Nav = () => {
 
   return (
     <nav className="fixed top-0 w-full h-6 z-50 !mix-blend-exclusion">
-      <ul className="relative px-6 py-4 flex items-center justify-between select-none">
+      <ul className="relative px-6 py-6 flex items-center justify-between select-none max-md:px-3 max-md:py-4">
         {pathname === "/" &&
           navigation.map((nav, i) => (
             <li
