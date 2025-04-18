@@ -19,12 +19,12 @@ const Nav = () => {
         {pathname === "/" &&
           navigation.map((nav, i) => (
             <li
-              className="relative group cursor-pointer"
+              className="relative group cursor-default"
               key={i}
               onClick={() => scrollToLenis(nav.href)}
             >
               <a className="nav-txt">{nav.title}</a>
-              <div className="absolute w-0 h-0.5 bottom-[-3px] bg-s transition-all duration-300 group-hover:w-full"></div>
+              <div className="absolute w-0 h-0.5 bottom-[-3px] bg-s transition-all duration-300 group-hover:w-full" />
             </li>
           ))}
 

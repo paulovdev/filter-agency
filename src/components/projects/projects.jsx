@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { projectsData } from "@/data/projectsData";
 import { useRouter } from "next/router";
-import { h2Animation, spanAnimation } from "@/animations/anim";
+import { arraySlideUpAnimation, spanAnimation } from "@/animations/anim";
 import { useMedia } from "react-use";
 
 const Projects = () => {
@@ -29,14 +29,14 @@ const Projects = () => {
       ref={container}
       id="project"
     >
-      <div className="sticky top-0 h-screen flex items-center justify-center z-50 !mix-blend-exclusion pointer-events-none select-none">
+      <div className="sticky top-0 h-screen flex flex-col items-center justify-center z-50 !mix-blend-exclusion pointer-events-none select-none">
         <div className="flex items-start" ref={text}>
           <div className="relative flex items-start overflow-hidden">
             {["P", "R", "O", "G", "E", "T", "T", "I", "S"].map((phrase, i) => (
               <motion.h2
                 key={i}
                 custom={i}
-                variants={h2Animation}
+                variants={arraySlideUpAnimation}
                 initial="initial"
                 animate={isInView ? "animate" : "initial"}
                 className="project-txt"
@@ -52,6 +52,16 @@ const Projects = () => {
             animate={isInView ? "animate" : "initial"}
           >
             (12)
+          </motion.span>
+        </div>
+        <div className="w-full ml-[250px] flex justify-center">
+          <motion.span
+            className="project-year-count-txt"
+            variants={spanAnimation}
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+          >
+            2020 to 2024
           </motion.span>
         </div>
       </div>

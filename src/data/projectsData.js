@@ -8,7 +8,7 @@ export const projectsData = [
     description:
       "Un'identità visiva che unisce arte e comunicazione. Il logo nasce da forme eteree e colori tenui, per evocare un senso di bellezza sussurrata e creatività autentica.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img1.jpg",
+    img: "/projects/img1.jpg",
     alt: "Logo Lyra Poesia Visiva",
   },
   {
@@ -20,7 +20,7 @@ export const projectsData = [
     description:
       "Stile deciso e angolazioni energiche. Questo logo riflette il ritmo della vita cittadina con un design compatto e d’impatto.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img2.jpg",
+    img: "/projects/img2.jpg",
     alt: "Logo Aeris Dinamica Urbana",
   },
   {
@@ -32,7 +32,7 @@ export const projectsData = [
     description:
       "Ogni curva del logo è pensata per evocare emozioni. Un progetto che punta alla connessione tra brand e pubblico attraverso la semplicità visiva.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img3.jpg",
+    img: "/projects/img3.jpg",
     alt: "Logo Orla Sintesi Emotiva",
   },
   {
@@ -44,7 +44,7 @@ export const projectsData = [
     description:
       "Un sistema visivo ispirato all’architettura moderna. Forme solide, strutture modulari e un’identità coerente per un brand professionale e affidabile.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img4.jpg",
+    img: "/projects/img4.jpg",
     alt: "Logo Velin Architettura Grafica",
   },
   {
@@ -56,19 +56,19 @@ export const projectsData = [
     description:
       "Linee fluide e colori accesi si fondono per rappresentare la vitalità del marchio. Un design che esprime movimento e spirito innovativo.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img1.jpg",
+    img: "/projects/img5.jpg",
     alt: "Logo Kaora Energia Creativa",
   },
   {
-    id: "nuvem",
-    name: "Nuvem™",
+    id: "nike-air-force",
+    name: "nike air force",
     category: "Design",
     year: 2022,
-    client: "Nuvem",
+    client: "nike",
     description:
       "Questo progetto abbraccia il vuoto con eleganza. Un logo ridotto all'essenziale, dove ogni elemento respira e comunica intensità attraverso la calma.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img2.jpg",
+    img: "/projects/img6.jpg",
     alt: "Logo Nuvem Minimalismo Sensoriale",
   },
   {
@@ -80,7 +80,7 @@ export const projectsData = [
     description:
       "Geometrie pure e proporzioni armoniche caratterizzano questo logo, pensato per trasmettere rigore e bellezza razionale.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img3.jpg",
+    img: "/projects/img7.jpg",
     alt: "Logo Astra Equilibrio Geometrico",
   },
   {
@@ -92,7 +92,7 @@ export const projectsData = [
     description:
       "Un font esclusivo è il cuore di questo progetto: lettere scolpite per emergere con forza e personalità nel panorama visivo contemporaneo.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img4.jpg",
+    img: "/projects/img8.jpg",
     alt: "Logo Mova Espressione Tipografica",
   },
   {
@@ -104,7 +104,7 @@ export const projectsData = [
     description:
       "Colori vibranti, trame digitali e forme flessibili: un logo che si evolve per attrarre menti giovani e visioni globali.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img1.jpg",
+    img: "/projects/img9.jpg",
     alt: "Logo Euno Vibrante Modernità",
   },
   {
@@ -116,7 +116,7 @@ export const projectsData = [
     description:
       "Eleganza sospesa tra il reale e l’astratto. Linee delicate e dettagli brillanti definiscono un’identità sofisticata e senza tempo.",
     license: "Utilizzo gratuito con licenza Unsplash",
-    img: "/assets/img2.jpg",
+    img: "/projects/img10.jpg",
     alt: "Logo Vora Lusso Etereo",
   },
 ];

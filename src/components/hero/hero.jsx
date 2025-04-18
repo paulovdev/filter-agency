@@ -1,19 +1,9 @@
 import Image from "next/image";
-import {
-  AnimatePresence,
-  motion,
-  useScroll,
-  useTransform,
-} from "framer-motion";
-import { useRef, useState } from "react";
-import { h1Anim, h1Anim2, imgAnim, imgAnim2 } from "@/animations/anim";
-
-import { useMedia } from "react-use";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
+import { arraySlideUpAnimation } from "@/animations/anim";
 
 const Hero = () => {
-  const [img, setImg] = useState(false);
-  const [img2, setImg2] = useState(false);
-  const isTablet = useMedia("(max-width: 768px)");
   const container = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -21,120 +11,106 @@ const Hero = () => {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, -75]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const y2 = useTransform(scrollYProgress, [0, 1], [0, -125]);
+  const y3 = useTransform(scrollYProgress, [0, 1], [0, 5]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
   const scale2 = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
 
   return (
     <section
-      className="w-full h-[100vh] px-6 mb-8 flex flex-col items-center justify-center select-none max-md:px-3"
+      className="w-full h-screen px-6 mb-8 flex flex-col items-center justify-center select-none max-md:px-3 overflow-hidden"
       id="index"
       ref={container}
+      style={{ y: 100 }}
     >
-      <div className="flex flex-col items-center justify-center">
-        <AnimatePresence>
-          <motion.div
-            className="flex items-center gap-4"
-            whileHover={() => setImg(true)}
-            onHoverEnd={() => setImg(false)}
-          >
+      <motion.div className="flex flex-col items-center justify-center">
+        <div className="relative flex items-start overflow-hidden">
+          {["f", "i", "l", "t", "r", "a", "r", "e"].map((phrase, i) => (
             <motion.h1
-              className="hero-txt max-md:!text-s max-md:mix-blend-exclusion"
-              variants={isTablet ? undefined : h1Anim}
-              animate={img ? "animate" : "initial"}
+              key={i}
+              custom={i}
+              variants={arraySlideUpAnimation}
+              initial="initial"
+              animate="animate"
+              className="hero-txt !text-s mix-blend-exclusion"
+              style={{ y: y3 }}
             >
-              TUTTO
+              {phrase}
             </motion.h1>
+          ))}
+        </div>
 
-            <motion.div
-              variants={imgAnim}
-              initial="initial"
-              animate={img ? "animate" : "initial"}
-              className="max-md:hidden"
-            >
-              <Image
-                src={"/assets/img1.jpg"}
-                width={500}
-                height={500}
-                alt=""
-                className="relative w-[200px] h-[115px]  max-md:w-[100px] max-md:h-[75px]"
-              />
-            </motion.div>
-          </motion.div>
-        </AnimatePresence>
-
-        <h1 className="hero-txt max-md:!text-s max-md:mix-blend-exclusion">
-          IN
-        </h1>
-
-        <AnimatePresence>
-          <motion.div
-            className="flex items-center gap-4"
-            whileHover={() => setImg2(true)}
-            onHoverEnd={() => setImg2(false)}
-          >
-            <motion.div
-              variants={imgAnim2}
-              initial="initial"
-              animate={img2 ? "animate" : "initial"}
-              className="max-md:hidden"
-            >
-              <Image
-                src={"/assets/img3.jpg"}
-                width={500}
-                height={500}
-                alt=""
-                className="relative w-[200px] h-[115px]"
-              />
-            </motion.div>
-
+        <div className="relative flex items-start overflow-hidden">
+          {["l", "e"].map((phrase, i) => (
             <motion.h1
-              className="hero-txt max-md:!text-s max-md:mix-blend-exclusion"
-              variants={isTablet ? undefined : h1Anim2}
-              animate={img2 ? "animate" : "initial"}
+              key={i}
+              custom={i}
+              variants={arraySlideUpAnimation}
+              initial="initial"
+              animate="animate"
+              className="hero-txt !text-s mix-blend-exclusion"
+              style={{ y: y3 }}
             >
-              UNO
+              {phrase}
             </motion.h1>
-          </motion.div>
-        </AnimatePresence>
+          ))}
+        </div>
 
-        <div className="hidden max-md:block absolute -z-10 ">
+        <div className="relative flex items-start overflow-hidden">
+          {["c", "o", "s", "e"].map((phrase, i) => (
+            <motion.h1
+              key={i}
+              custom={i}
+              variants={arraySlideUpAnimation}
+              initial="initial"
+              animate="animate"
+              className="hero-txt !text-s mix-blend-exclusion"
+            >
+              {phrase}
+            </motion.h1>
+          ))}
+        </div>
+
+        <div className="absolute -z-10">
           <motion.div
-            className="relative left-[150px] top-[125px]"
+            className="relative 
+            left-[185px] top-[160px] 
+            max-md:left-[150px] max-md:top-[125px]"
             style={{ y, scale }}
           >
             <Image
-              src={"/assets/img3.jpg"}
+              src={"/hero/hero1.jpg"}
               width={500}
               height={500}
               alt=""
-              className="relative w-[175px] h-[115px] brightness-75"
+              className="relative w-[175px] h-[115px] object-cover brightness-75"
             />
           </motion.div>
 
           <motion.div
-            className="relative right-[146px] top-[-115px]"
+            className="relative 
+            right-[185px] top-[-150px]
+            max-md:right-[146px] max-md:top-[-115px]"
             style={{ y: y2, scale: scale2 }}
           >
             <Image
-              src={"/assets/img1.jpg"}
+              src={"/hero/hero2.jpg"}
               width={500}
               height={500}
               alt=""
-              className="relative w-[175px] h-[115px] brightness-75"
+              className="relative w-[175px] h-[115px] object-cover brightness-75"
             />
           </motion.div>
         </div>
 
-        <div className="mt-8 flex items-center gap-2">
-          <h2 className="several-txt">filtro</h2>
-          <h2 className="several-txt">®</h2>
+        <motion.div className="mt-8 flex items-center gap-2" style={{ y: y3 }}>
+          <h2 className="several-txt">filtro ®</h2>
 
           <span className="several-txt">/</span>
           <h2 className="several-txt">scorrere verso il basso</h2>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

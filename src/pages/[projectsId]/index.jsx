@@ -1,11 +1,11 @@
 import { useLenis } from "@/context/lenis-context";
 import { projectsData } from "@/data/projectsData";
-import Layout from "@/utils/stairs";
+import Layout from "@/utils/loader";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
-import { h2Animation } from "@/animations/anim";
+import { arraySlideUpAnimation } from "@/animations/anim";
 const ProjectView = () => {
   const router = useRouter();
   const { stopLenis, startLenis } = useLenis();
@@ -17,7 +17,7 @@ const ProjectView = () => {
     offset: ["start start", "end start"],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [0, 800]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "300%"]);
 
   useEffect(() => {
     if (!router.isReady) return;
@@ -42,7 +42,7 @@ const ProjectView = () => {
 
   if (!isReady) {
     return (
-      <Layout>
+      <Layout backgroundColor={"#020202"}>
         <main className="size-full flex items-center justify-center">
           <p className="text-xl text-neutral-400">Carregando projeto...</p>
         </main>
@@ -52,7 +52,7 @@ const ProjectView = () => {
 
   if (!project) {
     return (
-      <Layout>
+      <Layout backgroundColor={"#020202"}>
         <main className="size-full flex items-center justify-center">
           <p className="text-xl text-red-400">Projeto não encontrado 😢</p>
         </main>
@@ -87,7 +87,7 @@ const ProjectView = () => {
                     <motion.h1
                       key={i}
                       custom={i}
-                      variants={h2Animation}
+                      variants={arraySlideUpAnimation}
                       initial="initial"
                       animate="animate"
                       className="project-view-hero-txt mix-blend-exclusion"
@@ -149,6 +149,56 @@ const ProjectView = () => {
               </div>
               <br />
             </div>
+          </div>
+        </section>
+        <section className="w-full my-12 mx-auto px-6 max-md:px-3">
+          <div className="size-full py-4">
+            <Image
+              src={"/projects/sample-project/sample1.jpg"}
+              width={1200}
+              height={1200}
+              alt=""
+              priority
+              className="size-full object-[50%_100%] brightness-[85%]"
+            />
+          </div>
+          <div className="w-full grid grid-cols-2 gap-4">
+            <Image
+              src={"/projects/sample-project/sample2.jpg"}
+              width={1200}
+              height={1200}
+              alt=""
+              priority
+              className="size-full flex-[2] object-[50%_100%] brightness-[85%]"
+            />
+            <Image
+              src={"/projects/sample-project/sample3.jpg"}
+              width={1200}
+              height={1200}
+              alt=""
+              priority
+              className="size-full flex-[2] object-[50%_100%] brightness-[85%]"
+            />
+          </div>
+          <div className="size-full py-4">
+            <Image
+              src={"/projects/sample-project/sample4.jpg"}
+              width={1200}
+              height={1200}
+              alt=""
+              priority
+              className="size-full object-[50%_100%] brightness-[85%]"
+            />
+          </div>
+          <div className="size-full py-4">
+            <Image
+              src={"/projects/sample-project/sample5.jpg"}
+              width={1200}
+              height={1200}
+              alt=""
+              priority
+              className="size-full object-[50%_100%] brightness-[85%]"
+            />
           </div>
         </section>
       </main>

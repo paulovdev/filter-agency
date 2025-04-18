@@ -45,7 +45,7 @@ export const imgAnim2 = {
   },
 };
 
-export const h2Animation = {
+export const arraySlideUpAnimation = {
   initial: { y: "175%" },
   animate: (i) => ({
     y: "0",
@@ -73,14 +73,27 @@ export const spanAnimation = {
 };
 
 export const pSlideParagraphAnim = {
-  initial: { y: "150%" },
+  initial: {
+    y: "170%",
+  },
   animate: (custom) => ({
     y: "0",
     transition: {
       duration: 1,
-
       ease: [0.33, 1, 0.68, 1],
       delay: 0.025 * custom,
+    },
+  }),
+};
+
+export const logoSlideAnim = {
+  initial: { opacity: 0 },
+  animate: (custom) => ({
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: [0.33, 1, 0.68, 1],
+      delay: 0.1 * custom,
     },
   }),
 };

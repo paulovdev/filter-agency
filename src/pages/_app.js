@@ -1,3 +1,4 @@
+import Footer from "@/components/footer/footer";
 import Nav from "@/components/nav";
 import { LenisProvider } from "@/context/lenis-context";
 import "@/styles/globals.css";
@@ -12,6 +13,7 @@ export default function App({ Component, pageProps, router }) {
         <AnimatePresence mode="wait" exitBeforeEnter>
           <Component {...pageProps} key={router.asPath} />
         </AnimatePresence>
+        <Footer />
       </LenisProvider>
     </div>
   );
